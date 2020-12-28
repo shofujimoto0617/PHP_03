@@ -58,4 +58,13 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    
+    /**
+     * Bookモデル　リレーション
+     */
+    public function books()
+    {
+        return $this->hasMany('App\Models\Book');
+    }
 }
+
