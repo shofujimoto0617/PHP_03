@@ -30,6 +30,8 @@
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    <a href="{{ route('top') }}" class="mr-4 text-sm text-gray-700 underline">Home</a>
+                    <a href="{{ route('about') }}" class="mr-4 text-sm text-gray-700 underline">About</a>
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
                     @else
@@ -39,7 +41,6 @@
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
                         @endif
                     @endauth
-                    <a href="{{ route('about') }}" class="ml-4 text-sm text-gray-700 underline">About</a>
                 </div>
             @endif
 
